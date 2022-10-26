@@ -1,0 +1,99 @@
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "image content";
+  height: 60vh;
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(245, 236, 236);
+  border-radius: 5px;
+}
+.project-container *{
+  font-family: 'Roboto Serif', serif;
+  border-left: 1px solid rgb(245, 236, 236) ;
+  margin:8px;
+  padding:0px
+}
+
+.logo-container {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.content-container {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.content > h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.logo {
+  height: 250px;
+  width: 100%;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.container {
+  font-weight: 500;
+}
+
+.owner {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 20%;
+  grid-template-areas: "owner-image owner-info";
+}
+
+.owner-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.owner-info > p {
+  margin-top: 0px;
+  padding-left: 10px;
+}
+
+.owner-name {
+  font-weight: 500;
+}
+
+.progress-container {
+  width: 50%;
+}
+
+.progress {
+  margin-top: 20px;
+}
+
+.raised-amount {
+  font-weight: bold;
+}
+
+.raised {
+  font-weight: 100;
+}
+
+.deadline {
+  margin-top: 10px;
+}
+
+.fund_info {
+  margin-top: 10px;
+}
+
+.actions {
+  margin-top: 30px;
+}
+.boldC{
+  text-transform: uppercase;
+  font-weight: bold;
+}

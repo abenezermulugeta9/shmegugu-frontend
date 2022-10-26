@@ -1,0 +1,14 @@
+<div class="col-4">
+  <div class="hold"  *ngFor="
+      let project of projects | paginate: { itemsPerPage: 8, currentPage: page }
+    "
+    >
+    <app-project-card [p]="project"
+
+  ></app-project-card>
+  <div class="centered mg-30">
+        <button projectListDirective [p]="project">View Applications</button>
+  </div>
+
+  </div>
+  </div>

@@ -1,0 +1,34 @@
+.col-4{
+  margin:50px
+}
+.hold {
+  width: inherit;
+  margin: 20px auto;
+
+}
+
+.hold button {
+  width: 80%;
+  margin: auto;
+  padding: 8px 15px;
+  font-family: 'Roboto Serif', serif;
+
+}
+.centered{
+  width:100%;
+  text-align: center;
+}
+.mg-30{
+  margin: 40px auto;
+}
+.center{
+  text-align: center;
+}
+
+.mg-50{
+  margin:50px
+}
+
+.title {
+  margin: 25px;
+}

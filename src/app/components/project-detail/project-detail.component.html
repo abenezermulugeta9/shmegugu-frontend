@@ -1,0 +1,57 @@
+<div class="project-container">
+  <div class="logo-container">
+    <img
+      class="logo"
+      src={{project.imageUrl}}
+      alt=""
+    />
+  </div>
+  <div class="content-container">
+    <h1 class="boldC" >
+      {{project.title}}
+    </h1>
+    <p class="container boldC">{{project.category}}</p>
+    <p>
+      {{project.description}}</p>
+
+      <div class="fund_info">
+        <p> <span class="boldC">Minimum Stake:</span>  {{project.minimum_stake}}</p>
+        <p > <span class="boldC" >Stage: </span> {{project.stage}}</p>
+        <p> <span class="boldC">Funding type: </span> {{project.funding_type}} </p>
+        </div>
+    <div class="owner" *ngFor="let row of project.owners">
+      <img
+        class="owner-image"
+        src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=600"
+        alt=""
+      />
+      <div class="owner-info">
+        <p class="owner-name">{{row.firstname}} {{row.lastname}}</p>
+        <!-- <p>IA, USA</p> -->
+      </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress">
+        <p class="raised-amount ">
+          $64000<span class="raised"> USD raised (82% of the total goal)</span>
+        </p>
+      </div>
+      <div class="progress-bar">
+        <mat-progress-bar mode="determinate" value="82" class="yellow"
+          >82%
+        </mat-progress-bar>
+      </div>
+      <div class="container">
+        <p>Address: {{project.address}}</p>
+        <p>Location: {{project.location}}</p>
+      </div>
+      <div class="deadline">
+        <p>23 days left</p>
+      </div>
+    </div>
+    <div class="actions">
+      <!-- <button (click)="gotoapply()" mat-raised-button class="primary-btn">Back this Project</button> -->
+    <button  class="primary-btn" mat-raised-button (click)="openDialog('0ms', '0ms')">Back this Project</button>
+    </div>
+  </div>
+</div>

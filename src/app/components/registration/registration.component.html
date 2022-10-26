@@ -1,0 +1,72 @@
+<div class="register-container">
+  <div class="logo-container">
+    <div class="logo">
+      <h3 class="x-large">
+        <span>S</span>hme<span>G</span>u<span>G</span>u
+      </h3>
+    </div>
+    <div class="tagline">
+      <p>Shmegugu, where early adopters and investors find lively, imaginative tech before it hits the mainstream.</p>
+    </div>
+  </div>
+
+  <div class="form">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <mat-card class="register-card">
+        <div class="form-group">
+          <h3>Sign up today and be part of the adventure.</h3>
+          <mat-form-field class="form-control" appearance="fill">
+            <mat-label>First name</mat-label>
+            <input class="inputBox" matInput formControlName="firstname" />
+          </mat-form-field>
+          <mat-form-field class="form-control" appearance="fill">
+            <mat-label>Last name</mat-label>
+            <input matInput class="inputBox" formControlName="lastname" />
+          </mat-form-field>
+          <mat-form-field class="form-control" appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput class="inputBox" formControlName="address" />
+          </mat-form-field>
+          <mat-form-field class="form-control" appearance="fill">
+            <mat-label>Phone</mat-label>
+            <input matInput class="inputBox" formControlName="phone" />
+          </mat-form-field>
+          <mat-form-field class="form-control" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput class="inputBox" formControlName="email" />
+          </mat-form-field>
+          <mat-form-field class="form-control" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" class="inputBox" formControlName="password" />
+          </mat-form-field>
+          <!-- <div class="userAvatar">
+            <p>
+              <button type="button" mat-raised-button (click)="fileInput.click()">
+                Upload image
+              </button>
+              <input
+                hidden
+                (change)="onFileSelected($event)"
+                #fileInput
+                type="file"
+                formControlName="imageUrl"
+              />
+              <span class="file-name">{{ selectedFile?.name }}</span>
+            </p>
+          </div> -->
+          <mat-radio-group aria-label="Select an option" formControlName="role">
+            <mat-radio-button value="Investor" class="radio-option">Investor</mat-radio-button>
+            <mat-radio-button value="Entrepreneur" class="radio-option">Entrepreneur</mat-radio-button>
+          </mat-radio-group>
+          <div class="actions">
+            <button mat-raised-button class="primary-btn" type="submit">Register</button>
+            <button mat-raised-button color="basic" type="reset">Reset</button>
+          </div>
+        </div>
+        <div id="register-footer-message">
+          <p>Already have an account? <a class="first-button" routerLink="/login">Login here</a></p>
+        </div>
+      </mat-card>
+    </form>
+  </div>
+</div>

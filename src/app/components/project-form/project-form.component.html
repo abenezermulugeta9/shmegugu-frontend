@@ -1,0 +1,111 @@
+<!--<p>project-form works!</p>-->
+<form [formGroup]="createProjectForm" (ngSubmit)="createProject()">
+    <div class="title">
+        <h1>Start a new Campaign</h1>
+    </div>
+<div class="container">
+    <div class = "col1">
+        <div>
+            <mat-form-field appearance="fill" floatLabel="always">
+              <mat-label>Campaign amount</mat-label>
+              <input matInput type="number" class="example-right-align" placeholder="0" formControlName="amount" >
+              <span matPrefix>$&nbsp;</span>
+              <span matSuffix>.00</span>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="legacy">
+              <mat-label>Campaign title</mat-label>
+              <input matInput placeholder="Enter title" formControlName="title">
+            </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Campaign description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+          </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                 <mat-label>Choose deadline</mat-label>
+                 <input matInput [matDatepicker]="picker" formControlName="deadline">
+                 <mat-hint>MM/DD/YYYY</mat-hint>
+                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                 <mat-datepicker #picker></mat-datepicker>
+               </mat-form-field>
+
+
+            </div>
+    </div>
+    <div class = "col2">
+
+      
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Select Stage </mat-label>
+          <mat-select formControlName="stage">
+            <mat-option value="Production">Production</mat-option>
+            <mat-option value="Prototype">Prototype</mat-option>
+            <mat-option value="Concept">Concept</mat-option>
+            <mat-option value="Shipping">Shipping</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+        <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Select category </mat-label>
+              <mat-select formControlName="category">
+                <mat-option value="Service">Service</mat-option>
+                <mat-option value="Product">Product</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput #input maxlength="10"  formControlName="address">
+                <mat-hint>1000 N 4th St Fairfield</mat-hint>
+              </mat-form-field>
+            </div>
+        <div>
+            <label>Funding type: </label>
+            <mat-radio-group formControlName="fundingType">
+              <mat-radio-button value="flexible">Flexible</mat-radio-button>
+              <mat-radio-button value="fixed">Fixed</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+
+    </div>
+    <div class = "col3">
+
+       <p>
+            <mat-form-field appearance="fill" floatLabel="always">
+              <mat-label>Target</mat-label>
+              <input matInput type="number" class="example-right-align" placeholder="0" formControlName="target">
+              <span matPrefix>$&nbsp;</span>
+              <span matSuffix>.00</span>
+            </mat-form-field>
+        </p>
+        <p>
+          <button type="button" mat-raised-button (click)="fileInput.click()">Upload image</button>
+          <!-- <input
+          style="padding-top: 24px"
+          id="fileuploader"
+          type="file"
+          accept="image/*"
+          (change)="onFileChange($event)"
+        /> -->
+          <input hidden (change)="onFileSelected($event)" accept="image/*"
+           #fileInput type="file">
+          <span class="file-name">{{selectedFile?.name}}</span>
+        </p>
+        <p>
+          <span class="actions">
+            <button mat-raised-button class="primary-btn" type="submit">Create </button>
+            <button mat-raised-button color="basic" type="reset">Reset</button>
+          </span>
+        </p>
+    </div>
+  </div>
+</form>

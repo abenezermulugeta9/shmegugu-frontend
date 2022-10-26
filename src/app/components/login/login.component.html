@@ -1,0 +1,37 @@
+<div class="login-container">
+  <div class="logo-container">
+    <div class="logo">
+      <h3 class="x-large">
+        <span>S</span>hme<span>G</span>u<span>G</span>u
+      </h3>
+    </div>
+    <div class="tagline">
+      <p>Shmegugu, where early adopters and investors find lively, imaginative tech before it hits the mainstream.</p>
+    </div>
+  </div>
+
+  <div class="form">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" >
+      <mat-card class="login-card">
+        <div class="form-group">
+          <h3>Login and make the world a better place.</h3>
+          <mat-form-field class="form-control" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput class="inputBox" formControlName="email"/>
+          </mat-form-field>
+          <mat-form-field class="form-control" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" class="inputBox" formControlName="password"/>
+          </mat-form-field>
+          <div class="actions">
+            <button mat-raised-button class="primary-btn" type="submit">Login</button>
+            <button mat-raised-button color="basic" type="reset">Reset</button>
+          </div>
+        </div>
+        <div id="login-footer-message">
+          <p>Already a member? <a class="first-button" routerLink="/register">Sign up here</a></p>
+        </div>
+      </mat-card>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+
+<div class="col-4">
+  <div
+    class="hold"
+    *ngFor="
+      let project of projects | paginate: { itemsPerPage: 8, currentPage: page }
+    "
+  >
+    <app-project-card [p]="project"></app-project-card>
+
+  </div>
+</div>
+<div class="center mg-50">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>

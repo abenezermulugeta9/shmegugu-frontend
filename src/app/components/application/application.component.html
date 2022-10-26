@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="application-panel">
+        <div class="container-match">
+            <h3>Back This Project</h3>
+            <p>Apply early to be approved to this StartUp,
+                 chances of your approval is high if your 
+                 offers are attractive, please note that 
+                 you cant submit a offer less than the 
+                 minimum amount shown below
+            </p>
+          <div class="offer">
+            
+            <div>
+                 <input matInput  placeholder="start with $ {{min_stake}}" type="text" #offer>
+                   <div class="btn">
+                <button  applyDirective [offer]="offer.value" >Send Offer</button>
+            </div>
+            </div>
+          
+           
+          </div>
+        </div>
+      </div>
+      <p class="x-small mg-30">
+        You agree to ShemeGuGu's Terms of Use & Privacy Policy. By choosing to
+        contact a property, you also agree that Zillow Group, landlords, and
+        property managers may call or text you about any inquiries you submit
+        through our services, which may involve use of automated means and
+        prerecorded/artificial voices. You don't need to consent as a condition
+        of renting any property, or buying any other goods or services.
+        Message/data rates may apply.
+      </p>
+      <div class="logo">
+        <h3 class="logo mid">
+          <span class="large">S</span>hme<span class="large">G</span>u<span
+            class="large"
+            >G</span
+          >u
+        </h3>
+      </div>
+    </div>
+ 

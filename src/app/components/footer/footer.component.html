@@ -1,0 +1,94 @@
+
+<footer>
+  <div class="container col-3">
+    <div>
+      <div class="logo">
+        <h3 class="logo mid">
+          <span class="large">S</span>hme<span class="large">G</span>u<span
+            class="large"
+            >G</span
+          >u
+        </h3>
+      </div>
+      <div class="label">
+        <h3 class="large">Get the tech that gets people talking</h3>
+        <p>
+          With both live crowdfunding campaigns and innovative products shipping
+          now, there's no better place to start the hunt for cool and clever
+          innovations that surprise and delight. Indiegogo is where new
+          launches.
+        </p>
+      </div>
+    </div>
+    <div class="nav bottom">
+      <ul *ngIf="APP_STATE.token">
+        <li><a routerLink="/">HOME</a></li>
+        <li *ngIf="APP_STATE.role === 'Entrepreneur'">
+          <a routerLink="/project-form">START A CAMPAIGN</a>
+        </li>
+        <li *ngIf="APP_STATE.role === 'Entrepreneur'">
+          <a routerLink="/projects">MANAGE PROJECTS</a>
+        </li>
+        <li><a routerLink="#">APPLICATIONS</a></li>
+      </ul>
+      <ul *ngIf="!APP_STATE.token">
+        <li><a routerLink="/login">LOGIN</a></li>
+        <li><a routerLink="/register">SIGNUP</a></li>
+      </ul>
+    </div>
+
+    <div class="label mg-big">
+      <h3 class="large">Find it first on ShemeGuGu</h3>
+      <p>
+        There's no better place to start the hunt for something new and special.
+        Begin on Indiegogo to find clever and unconventional things that solve
+        everyday problems large and small.
+      </p>
+      <!-- <button mat-flat-button>SIGN UP NOW</button> -->
+
+      <button *ngIf="!APP_STATE.email" mat-flat-button (click)="gotosignup()">
+        SIGN UP NOW
+      </button>
+      <button
+        *ngIf="APP_STATE.email && APP_STATE.role === 'Investor'"
+        mat-flat-button
+        (click)="findProjectsNearby()"
+      >
+        PROJECTS NEARBY
+      </button>
+      <button
+        *ngIf="APP_STATE.email && APP_STATE.role === 'Entrepreneur'"
+        mat-flat-button
+        (click)="myProjects()"
+      >
+        MY PROJECTS
+      </button>
+
+      <div class="social mg-30">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="facebook"
+        ></mat-icon>
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="twitter"
+        ></mat-icon>
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon=""
+        ></mat-icon>
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="linkedin"
+        ></mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="foot font-normal">
+    <p>Shemegugu Crowd Funding &copy;</p>
+  </div>
+</footer>

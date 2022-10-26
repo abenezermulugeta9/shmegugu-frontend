@@ -1,0 +1,155 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+font-family: 'Roboto Serif', serif;
+}
+
+.x-large {
+  font-size: 70px;
+}
+
+.large {
+    font-size: 35px
+}
+
+.mid {
+  font-size: 25px;
+}
+
+.font-normal {
+  font-size: 14;
+}
+
+.mg-big {
+  margin: 70px;
+}
+.pd-15{
+  margin: 15px;
+}
+
+.mg-30 {
+  margin: 30px;
+}
+.col-2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.primary-btn {
+  background-color: rgb(249, 226, 98);
+  color: rgb(0, 10, 48);
+  padding: 0px 15px;
+  border:none;
+}
+
+button {
+  background-color: rgb(249, 226, 98);
+  color: rgb(0, 10, 48);
+  padding: 0px 15px;
+  border: none;
+}
+
+button:hover {
+  background-color: white;
+  border: 1px solid rgb(249, 226, 98);
+}
+
+.contained {
+  margin: 20px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(242, 250, 255);
+    height:100px;
+}
+
+.logo {
+  padding: 12px;
+  display: inline-block;
+}
+
+.logo h3 {
+
+    display: inline-block;
+    align-items: center;
+    color: rgb(255, 0, 38);
+    padding: 12px;
+    margin: 0px 20px;
+    font-family: 'Creepster', cursive;
+}
+
+.logo h3 > span {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: bolder;
+  color: rgb(0, 10, 48);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav a {
+  font-weight: 500;
+  color: rgb(255, 0, 38);
+  text-decoration: none;
+  color: rgb(255, 0, 38);
+  padding: 12px;
+}
+
+.nav a:hover {
+  border-bottom: 1px dashed rgb(249, 226, 98);
+  color: rgb(0, 10, 48);
+}
+
+footer {
+  background-color: rgb(242, 250, 255);
+}
+
+.col-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.bottom ul li {
+  display: block;
+  text-align: left;
+  padding: 12px;
+}
+
+footer .label {
+    text-align: center;
+    font-family: 'Roboto Serif', serif;
+}
+
+footer .label h3 {
+  font-family: "Roboto Serif", serif;
+}
+
+.foot {
+  text-align: center;
+  padding: 8px;
+}

@@ -1,0 +1,46 @@
+
+  <div class="project  ">
+  <mat-card class="project-card">
+    <div (click)="opendetail()">
+      <img class="project-logo" src="{{ project.imageUrl }}" alt="" />
+      <div class="tag-line">
+        <p>{{ project.title }}</p>
+      </div>
+      <hr />
+      <div class="project-title">
+        <h1>{{ project.title }}</h1>
+      </div>
+      <div class="project-description">
+        <p>
+          {{ project.description }}
+        </p>
+      </div>
+      <div class="categories">
+        <p>{{ project.category }}</p>
+      </div>
+      <div class="progress">
+        <p class="raised-amount">
+          {{ project.goal.target }}<span class="raised"> USD to rais</span>
+        </p>
+        <p class="progress-percentage">82%</p>
+      </div>
+      <div class="progress-bar">
+        <mat-progress-bar
+          class="progress-bar"
+          mode="determinate"
+          value="82"
+          class="yellow"
+          >82%</mat-progress-bar
+        >
+      </div>
+      <div class="deadline col-2">
+        <p class="start red">23 days left</p>
+        <div>
+          <p>{{ project.stage }}</p>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+

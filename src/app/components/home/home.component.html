@@ -1,0 +1,33 @@
+<div class="banner">
+  <img src="../../../assets/images/Crowdfunding-Banner-01.png" alt="Banner" class="banner" />
+</div>
+<div class="main contained">
+  <div class="label">
+    <h3 class="large">Find it first on ShemeGuGu</h3>
+    <p>
+      Shmegugu is where early adopters and innovation seekers find lively,
+      imaginative tech before it hits the mainstream.
+    </p>
+    <button *ngIf="!APP_STATE.email" mat-flat-button (click)="gotosignup()">
+      SIGN UP NOW
+    </button>
+    <button *ngIf="APP_STATE.email && APP_STATE.role === 'Investor'" mat-flat-button (click)="findProjectsNearby()">
+      PROJECTS NEARBY
+    </button>
+    <button *ngIf="APP_STATE.email && APP_STATE.role === 'Entrepreneur'" mat-flat-button (click)="myProjects()">
+      MY PROJECTS
+    </button>
+  </div>
+</div>
+<div class="col-4">
+  <div
+    class="hold"
+    *ngFor="
+      let project of projects | paginate: { itemsPerPage: 8, currentPage: page }">
+    <app-project-card [p]="project"></app-project-card>
+    
+  </div>
+</div>
+<div class="center mg-50">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>

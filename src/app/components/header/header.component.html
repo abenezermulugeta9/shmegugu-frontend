@@ -1,0 +1,38 @@
+<div class="header">
+  <div class="logo">
+    <h3 class="logo x-large" routerLink="">
+      <span>S</span>hme<span>G</span>u<span>G</span>u
+    </h3>
+  </div>
+  <div class="nav">
+    <ul *ngIf="APP_STATE.email">
+      <li><a routerLink="/">HOME</a></li>
+      <li *ngIf="APP_STATE.role != 'Investor'">
+        <a routerLink="/project-form">START A CAMPAIGN</a>
+      </li>
+      <li *ngIf="APP_STATE.role != 'Investor'">
+        <a routerLink="/projects">MANAGE PROJECTS</a>
+      </li>
+      <!-- <li><a routerLink="applications">APPLICATIONS</a></li> -->
+      <!-- <li><button class="logout-btn" (click)="logout()">LOGOUT</button></li> -->
+    </ul>
+    <div class="owner" *ngIf="APP_STATE.email">
+      <img
+        class="owner-image"
+        src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=600"
+        alt=""
+      />
+      <button mat-button [matMenuTriggerFor]="menu" class="owner-name">
+        {{APP_STATE.firstname}} {{APP_STATE.lastname}}
+      </button>
+      <mat-menu #menu="matMenu">
+        <button (click)="openDialog('0ms', '0ms')" mat-menu-item>Edit profile</button>
+        <button (click)="logout()" mat-menu-item>Logout</button>
+      </mat-menu>
+    </div>
+    <ul *ngIf="!APP_STATE.email">
+      <li><a routerLink="/login">LOGIN</a></li>
+      <li><a routerLink="/register">SIGNUP</a></li>
+    </ul>
+  </div>
+</div>

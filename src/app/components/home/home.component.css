@@ -1,0 +1,83 @@
+.large {
+    font-size: 35px;
+}
+.center{
+    text-align: center;
+}
+
+.mg-50{
+    margin:50px
+}
+
+button {
+    background-color: rgb(249, 226, 98);
+    color: rgb(0, 10, 48);
+    padding: 0px 15px;
+}
+
+button:hover {
+    background-color: white;
+    border: 1px solid rgb(249, 226, 98);
+
+}
+
+.contained {
+    margin: 20px;
+}
+.banner {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    object-fit: cover;
+    height: 65%;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgb(249, 226, 98), rgba(3, 1, 27, 0));
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 98%;
+
+}
+
+.main .label {
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto Serif', serif;
+
+}
+
+.main .label h3 {
+    font-family: 'Roboto Serif', serif;
+}
+.col-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:50px;
+    max-width: 80%;
+    margin:5px auto;
+}
+.hold{
+    width: inherit;
+    margin: auto;
+
+}
+.hold button{
+    width: 80%;
+    margin: auto;
+    padding: 8px 15px;
+    font-family: 'Roboto Serif', serif;
+
+}

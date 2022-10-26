@@ -1,0 +1,131 @@
+.container {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "project project project project";
+  gap: 50pt;
+}
+.yellow {
+  color: rgb(249, 226, 98);
+}
+
+.project {
+  width: 90%;
+  height: 455px;
+  margin: auto;
+}
+button {
+  width: 100%;
+  margin: auto;
+  background-color: rgb(249, 226, 98);
+  color: rgb(0, 10, 48);
+  padding: 8px 15px;
+  border: none;
+  font-family: "Roboto Serif", serif;
+}
+
+button:hover {
+  background-color: white;
+  border: 1px solid rgb(249, 226, 98);
+}
+
+.project-card {
+  width: 95%;
+  margin: 5px auto;
+  height: 100%;
+}
+.project-card:hover {
+  opacity: 0.5;
+}
+.project-title h1 {
+  text-transform: uppercase;
+}
+
+.project-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.project-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.tag-line {
+  margin-top: 7px;
+}
+
+.tag-line > p {
+  font-weight: 500;
+}
+
+.project-description {
+  color: rgb(80, 80, 80);
+}
+
+.project-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.categories p {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.raised {
+  font-weight: 400;
+}
+
+.raised-amount {
+  font-weight: bolder;
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-template-areas: "raised-amount progress-percentage";
+}
+.progress-bar {
+  color: rgb(255, 0, 38);
+}
+
+.deadline {
+  justify-content: space-around;
+  text-align: end;
+}
+.start {
+  text-align: start;
+}
+.deadline p {
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.red {
+  color: rgb(255, 0, 38);
+}
+
+.sidenav-container {
+  padding: 50px;
+  background-color: rgb(251, 249, 249);
+  border-radius: 4px;
+}
+
+.sidenav-item {
+  line-height: 25px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.active {
+  font-weight: 900;
+  font-size: 15px;
+}
+.project-card img {
+  width: 90%;
+  margin: auto;
+}

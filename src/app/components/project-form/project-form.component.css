@@ -1,0 +1,74 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 100px;
+  }
+
+  .container {
+    /* height: 100%; */
+    width:98%;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+
+  }
+  .col1 {
+    margin-left: 80px; 
+  
+  }
+  .col1, .col2, .col3 {
+    height: 100%;
+    padding: 7px;
+    float:left;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+.mat-radio-button {
+    margin: 0 12px;
+}
+  .actions {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px
+  }
+  .action button{
+    width: 90%;
+    margin:auto;
+  }
+  button {
+    margin-right: 10px;
+  }
+
+  .first-button {
+    text-decoration: underline;
+  }
+  .col p textarea {
+    width: 100%;
+    height: 120px;
+  }
+  .file-name {
+    margin-left: 1rem; /* or whatever margin you require */
+}
+mat-form-field{
+  width: 90%;
+  margin:auto
+}
+.title{
+  text-align: center;
+  margin:20px 5px 10px 5px;
+  font-family: 'Roboto Serif', serif;
+}

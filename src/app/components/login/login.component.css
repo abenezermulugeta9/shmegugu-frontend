@@ -1,0 +1,95 @@
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 'logo form';
+  width: 50%;
+  height: 100vh;
+  margin: auto;
+}
+
+.logo-container {
+  margin-top: 70%;
+  text-align: center;
+}
+
+.tagline {
+  text-align: center;
+  padding: 0px 20px;
+}
+
+.form {
+}
+
+.x-large {
+  font-size: 70px;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'login-card logo-card';
+}
+
+.login-card {
+  height: 40%;
+  margin-top: 100px;
+  margin: 10px;
+  margin-top: 50%
+}
+
+.logo-card {
+  position: absolute;
+  margin-top: 150px;
+}
+
+.logo-card > img {
+  width: 300px;
+  height: 300px;
+  margin-left: 40%;
+}
+
+
+.logo-card > h1 {
+  font-size: 34pt;
+  font-weight: 600;
+  margin-left: 50%;
+}
+
+
+.logo-card > p {
+  padding-top: 7px;
+  font-size: 12pt;
+  margin-left: 50%;
+  text-align: center;
+}
+
+.form-control {
+  display: block;
+  width: 90%;
+}
+
+.form-group > h3 {
+  font-weight: bold;
+}
+
+#login-footer-message {
+  margin-top: 20px;
+}
+
+.first-button {
+  text-decoration: underline;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.radio-option {
+
+  margin-right: 10px;
+}
+
+button {
+  margin-right: 10px;
+}
+

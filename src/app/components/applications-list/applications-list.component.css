@@ -1,0 +1,55 @@
+table {
+    width: 40%;
+    margin:  30px auto;
+}
+.btn{
+    padding:8px 12px;
+    border-radius: 6px;
+    margin:5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+}
+.approve{
+    background-color: rgb(68, 142, 66);
+
+}
+.reject{
+    background-color: rgb(217, 71, 71);
+}
+
+.mat-column-demo-position {
+    width: 60px;
+    border-right: 1px solid currentColor;
+    
+    text-align: center;
+}
+
+.mat-column-demo-name {
+    width: 25px;
+    font-size: 20px;
+}
+
+.mat-column-demo-weight {
+    width: 25px;
+    font-style: italic;
+}
+
+.mat-column-demo-symbol {
+    width: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.center *{
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto Serif', serif;
+
+}
+.center h1{
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 15px ;
+}
