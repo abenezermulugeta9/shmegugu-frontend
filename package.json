@@ -12,7 +12,7 @@
   "engines": {
     "npm": "5.6.0",
     "node": "8.10.0"
-  }
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.2.0",
