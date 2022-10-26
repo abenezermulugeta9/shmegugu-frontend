@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, title: 'Profile', canActivate: [AuthGuard] },
   { path: 'applications', component: ApplicationsListComponent, title: 'applications', canActivate: [AuthGuard] },
   { path: 'projects', loadChildren: () => import('./modules/projects/projects.module').then( (m) => m.ProjectsModule), title: 'Projects' },
-  { path: '**', redirectTo: 'Page-not-found' },
+  { path: '**', redirectTo: 'page-not-found' },
   { path: 'page-not-found', component: ErrorComponent, title: 'Page not found' },
 ];
 
